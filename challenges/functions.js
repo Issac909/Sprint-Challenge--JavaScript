@@ -6,6 +6,14 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function higherOrder (a, b, cb) {
+  return cb(a, b);
+}
+function consume () {
+  console.log(`This function is added after higherOrder`);
+}
+
+higherOrder(5, 12, consume);
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,8 +21,20 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(num1, num2) {
+  console.log(`Adding ${num1} and ${num2} makes ${num1 + num2}`);
+}
+higherOrder(10, 34, add);
 
+function multiply(num1, num2) {
+  console.log(`Multiplying ${num1} and ${num2} makes ${num1 * num2}`);
+}
+higherOrder(42, 15, multiply);
 
+function stringify(firstName, lastName) {
+  console.log(`Hello ${firstName} ${lastName}, nice to meet you!`);
+}
+higherOrder('Don', 'Shallow', stringify);
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
 // console.log(consume(10, 16, multiply)); // 160
@@ -25,7 +45,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: The nestedFunction() in the below example has access to the internal variable because it is within a closure and can use the same variables/
 
 
 const external = "I'm outside the function";
