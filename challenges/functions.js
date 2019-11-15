@@ -45,7 +45,7 @@ higherOrder('Don', 'Shallow', stringify);
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: The nestedFunction() in the below example has access to the internal variable because it is within a closure and can use the same variables/
+// Explanation: The nestedFunction() in the below example has access to the internal variable because it is within a closure and can use the same variables.
 
 
 const external = "I'm outside the function";
