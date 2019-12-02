@@ -39,12 +39,12 @@ Closures have to do with the way functions pass off their data to other function
 
 4. Describe the four rules of the 'this' keyword.
 1. "This" can be used in strict or window 
-2. "This" can be used Implicitly
+2. "This" can be used Implicitly 
 3. "This" can be used Explicitly with methods call() apply() and bind(). Each of these allow the initial function to gather info from child objects.
 4. "This" can be used in New Binding to create a new function based on parent function parameters
 
 5. Why do we need super() in an extended class?
-Whenever you are using "extends" to pass a class's information to a new class.
+Whenever you are using "extends" to pass a class's attributes and methods to a new class.
 ## Project Set up
 
 Follow these steps to set up and work on your project:
